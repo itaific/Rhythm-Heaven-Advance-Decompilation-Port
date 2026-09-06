@@ -259,6 +259,7 @@ script script_remix_1_unused_main
     beat_anim
     rest 24
     beat_anim
+    #ifdef SFX
     if_localized
     print_text_f 2
     rest 12
@@ -269,6 +270,10 @@ script script_remix_1_unused_main
     rest 24
     print_text_f 2
     end_if
+    #else
+    rest 24
+    print_text_f 2
+    #endif
     beat_anim
     rest 24
     clear_text_f
@@ -314,6 +319,7 @@ script script_remix_1_unused_main
     beat_anim
     rest 24
     beat_anim
+    #ifdef SFX
     if_localized
     print_text_f 2
     rest 12
@@ -324,6 +330,10 @@ script script_remix_1_unused_main
     rest 24
     print_text_f 2
     end_if
+    #else
+    rest 24
+    print_text_f 2
+    #endif
     beat_anim
     rest 24
     clear_text_f
@@ -371,6 +381,7 @@ script script_remix_1_unused_main
     beat_anim
     rest 24
     beat_anim
+    #ifdef SFX
     if_localized
     print_text_f 2
     rest 12
@@ -381,6 +392,10 @@ script script_remix_1_unused_main
     rest 24
     print_text_f 2
     end_if
+    #else
+    rest 24
+    print_text_f 2
+    #endif
     beat_anim
     rest 24
     clear_text_f
@@ -472,6 +487,7 @@ script script_remix_1_unused_main
     beat_anim
     rest 24
     beat_anim
+    #ifdef SFX
     if_localized
     print_text_f 2
     rest 12
@@ -482,6 +498,10 @@ script script_remix_1_unused_main
     rest 24
     print_text_f 2
     end_if
+    #else
+    rest 24
+    print_text_f 2
+    #endif
     beat_anim
     rest 24
     clear_text_f
@@ -548,6 +568,7 @@ script script_remix_1_unused_main
     beat_anim
     rest 24
     beat_anim
+    #ifdef SFX
     if_localized
     print_text_f 2
     rest 12
@@ -558,6 +579,10 @@ script script_remix_1_unused_main
     rest 24
     print_text_f 2
     end_if
+    #else
+    rest 24
+    print_text_f 2
+    #endif
     beat_anim
     rest 24
     clear_text_f
@@ -946,6 +971,7 @@ script script_remix_1_unused_main
     rest 24
 
     load_karate_man
+    #ifdef PLUS
     print_text_f 5
     if_localized
     rest 12
@@ -955,6 +981,10 @@ script script_remix_1_unused_main
     else
     rest 24
     end_if
+    #else
+    print_text_f 4
+    rest 24
+    #endif
     rest 24
     clear_text_f
     spawn_cue CUE_POT
