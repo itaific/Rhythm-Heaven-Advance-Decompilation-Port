@@ -81,8 +81,6 @@ static const char *options_scene_bitmap_get_value(s32 entry) {
         case OPTIONS_BITMAP_RUMBLE:
             return CHECK_ADVANCE_FLAG(D_030046a8->data.advanceFlags, ADVANCE_FLAG_DISABLE_RUMBLE) ? "‚n‚†‚†" : "‚n‚Ž";
 #endif
-        case OPTIONS_BITMAP_PARADISE:
-            return CHECK_ADVANCE_FLAG(D_030046a8->data.advanceFlags, ADVANCE_FLAG_PARADISE) ? "‚q‚ˆ‚™‚”‚ˆ‚@‚o‚‚’‚‚„‚‰‚“‚…" : "‚q‚ˆ‚™‚”‚ˆ‚@‚g‚…‚‚–‚…‚Ž";
         case OPTIONS_BITMAP_SKIP_DISCLAIMER:
             return CHECK_ADVANCE_FLAG(D_030046a8->data.advanceFlags, ADVANCE_FLAG_SKIP_DISCLAIMER) ? "‚r‚‹‚‰‚" : "‚r‚ˆ‚‚—";
 
@@ -691,20 +689,6 @@ static void options_scene_update_main_bitmap(void) {
                     }
                     break;
 #endif
-
-                case OPTIONS_BITMAP_PARADISE:
-                    TOGGLE_ADVANCE_FLAG(D_030046a8->data.advanceFlags, ADVANCE_FLAG_PARADISE);
-                    write_game_save_data();
-                    options_scene_bitmap_refresh_line(OPTIONS_BITMAP_PARADISE);
-                    if (CHECK_ADVANCE_FLAG(D_030046a8->data.advanceFlags, ADVANCE_FLAG_PARADISE)) {
-                        play_sound(&s_menu_kettei2_seqData);
-                        rumble_play_menu_confirm();
-                    } else {
-                        play_sound(&s_menu_cancel3_seqData);
-                        rumble_play_menu_cancel();
-                    }
-                    break;
-
                 case OPTIONS_BITMAP_SKIP_DISCLAIMER:
                     if (D_03004afc & RIGHT_SHOULDER_BUTTON) {
                         play_sound(&s_mario_melo1_seqData);

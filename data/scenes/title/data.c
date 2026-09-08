@@ -8,7 +8,8 @@
 
 
 // [D_089dcf68] Title Logo Characters
-struct TitleLogoCharData title_logo_char_data_paradise[TOTAL_TITLE_LOGO_BUBBLES] = {
+#ifdef PARADISE
+struct TitleLogoCharData title_logo_char_data[TOTAL_TITLE_LOGO_BUBBLES] = {
     /* RH */ {
         /* Anim. */ anim_title_logo_rh_paradise,
         /* X, Y  */ 76, 70,
@@ -45,9 +46,8 @@ struct TitleLogoCharData title_logo_char_data_paradise[TOTAL_TITLE_LOGO_BUBBLES]
         /* Angle */ 37
     }
 };
-
-
-struct TitleLogoCharData title_logo_char_data_heaven[TOTAL_TITLE_LOGO_BUBBLES] = {
+#else
+struct TitleLogoCharData title_logo_char_data[TOTAL_TITLE_LOGO_BUBBLES] = {
     /* RH */ {
         /* Anim. */ anim_title_logo_rh,
         /* X, Y  */ 75, 70,
@@ -84,6 +84,7 @@ struct TitleLogoCharData title_logo_char_data_heaven[TOTAL_TITLE_LOGO_BUBBLES] =
         /* Angle */ 37
     }
 };
+#endif
 
 // [D_089dcfa4] Graphics Table
 struct GraphicsTable title_gfx_table[] = {
