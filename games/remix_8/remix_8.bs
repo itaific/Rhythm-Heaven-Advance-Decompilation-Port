@@ -273,7 +273,7 @@ script script_remix_8_main
     rest 24
     spawn_cue CUE_POT
     beat_anim
-    #ifdef SFX
+    #ifdef PLUS
     if_localized
     print_text_f 3
     rest 12
@@ -443,7 +443,7 @@ script script_remix_8_main
     rest 24
     rest 24
     spawn_cue CUE_ROCK
-    #ifdef SFX
+    #ifdef PLUS
     if_localized
     print_text_f 3
     rest 12

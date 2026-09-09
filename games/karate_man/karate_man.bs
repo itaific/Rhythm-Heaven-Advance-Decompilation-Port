@@ -386,7 +386,7 @@ script karate_man_sub_089ee9cc
     beat_anim
     rest 24
     beat_anim
-    #ifdef SFX
+    #ifdef PLUS
     if_localized
     print_text_f 3
     rest 12
@@ -466,7 +466,7 @@ script karate_man_sub_089ee9cc
     beat_anim
     rest 24
     beat_anim
-    #ifdef SFX
+    #ifdef PLUS
     if_localized
     print_text_f 2
     rest 12
